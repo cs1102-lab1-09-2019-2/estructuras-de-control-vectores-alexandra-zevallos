@@ -1,9 +1,9 @@
 # Ejercicios Estructuras de Control
 
-Nombre:
+Nombre: Alexandra Amy Zevallos Carhuamaca
 --
 
-Github Username:
+Github Username:alexandra-zevallos
 --
 
 Instrucciones:
