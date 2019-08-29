@@ -1,18 +1,33 @@
-
-
+#include <iostream>
+#include <vector>
+#include <iomanip>
+using namespace std;
 
 float promedio(vector<int> &lista);
 vector<int> leerConsola();
 
 vector<int> leerConsola() {
-    //Ingrese un numero positivo, escriba -1 si ya no quiere ingresar mas numeros:
+    vector <int> lista;
+    int number;
+    do {
+      cin>> number;
+      if(number == -1) 
+      break;
+      else 
+        lista.push_back(number);
+    } while (true);
+    return lista;
 }
 
-int promedio(vector<int> &lista) {
-    /*
-    El promedio es la suma de todos los elementos dividido entre el total de elementos
-     */
-    return null;
+float promedio(vector<int> &lista) {
+    int lista_size;
+    float promedio = 0;
+    lista_size = lista.size();
+    for(int r = 0; r < lista_size; r++) {
+      promedio = promedio + lista[r];
+    }
+    promedio = promedio / lista_size;
+    return promedio;
 }
 
 int main() {
@@ -20,4 +35,5 @@ int main() {
     vector<int> leer_usuario = leerConsola();
     float promedio_elemento = promedio(leer_usuario);
     cout<<"El promedio es: "<<fixed<<setprecision(2)<<promedio_elemento<<"\n";
+    return 0;
 }
