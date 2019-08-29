@@ -21,8 +21,8 @@ vector<int> leerConsola() {
 
 int moda(vector<int> &lista) {
     int lista_size, moda_place, moda, repeticiones = 0, mayor = 0;
-    vector <int> repeticiones_totales;
     lista_size = lista.size();
+    vector <int> repeticiones_totales;
     for(int r = 0; r < lista_size; r++) {
       for(int c = 0; c < (lista_size - 1); c++) 
         if(r != c) 
@@ -43,7 +43,7 @@ int moda(vector<int> &lista) {
 
 
 int main() {
-    cout<<"Calcular la moda de los numeros ingresados:\n\n";
+    cout<<"Calcular la moda de los numeros ingresados: (cuando termine de ingresar los numeros digite -1) \n\n";
     vector<int> leer_usuario = leerConsola();
     int moda_elemento = moda(leer_usuario);
     cout<<"La moda es: "<<moda_elemento<<"\n";
