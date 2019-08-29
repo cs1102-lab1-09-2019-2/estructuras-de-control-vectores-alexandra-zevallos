@@ -21,9 +21,8 @@ vector<int> leerConsola() {
 
 float promedio(vector<int> &lista) {
     float promedio = 0;
-    for(int r = 0; r < lista.size(); r++) {
+    for(int r = 0; r < lista.size(); r++) 
       promedio = promedio + lista[r];
-    }
     promedio = promedio / lista.size();
     return promedio;
 }
