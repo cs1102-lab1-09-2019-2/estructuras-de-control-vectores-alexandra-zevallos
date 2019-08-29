@@ -20,18 +20,16 @@ vector<int> leerConsola() {
 }
 
 float promedio(vector<int> &lista) {
-    int lista_size;
     float promedio = 0;
-    lista_size = lista.size();
-    for(int r = 0; r < lista_size; r++) {
+    for(int r = 0; r < lista.size(); r++) {
       promedio = promedio + lista[r];
     }
-    promedio = promedio / lista_size;
+    promedio = promedio / lista.size();
     return promedio;
 }
 
 int main() {
-    cout<<"Calcular el promedio de los ingresados:\n\n";
+    cout<<"Calcular el promedio de los ingresados: (digite -1 para salir)\n\n";
     vector<int> leer_usuario = leerConsola();
     float promedio_elemento = promedio(leer_usuario);
     cout<<"El promedio es: "<<fixed<<setprecision(2)<<promedio_elemento<<"\n";
