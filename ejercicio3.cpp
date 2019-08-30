@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int mediana(vector<int> &lista);
@@ -20,6 +21,7 @@ vector<int> leerConsola() {
 
 int mediana(vector<int> &lista) {
     int mediana, size_lista = lista.size();
+    sort(lista.begin(), lista.end());
     if(size_lista % 2 == 0) 
       mediana = (lista[(size_lista/2)-1] + lista[size_lista/2]) / 2;
     else
@@ -28,7 +30,7 @@ int mediana(vector<int> &lista) {
 }
 
 int main() {
-    cout<<"Calcular la mediana de los numeros ingresados:\n\n";
+    cout<<"Calcular la mediana de los numeros ingresados: (digite -1 cuando termine)\n\n";
     vector<int> leer_usuario = leerConsola();
     int mediana_elemento = mediana(leer_usuario);
     cout<<"La mediana es: "<<mediana_elemento<<"\n";
