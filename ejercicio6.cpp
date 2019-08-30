@@ -8,13 +8,12 @@ using std::vector;
 int main() {
   int num_1, num_2, num_3, size_n, mayor = 0;
   vector <int> n;
-  cout<< "Ingrese tres numeros separados por un espacio:\n";
+  cout<< "Ingrese tres numeros separados por un espacio: \n";
   cin>> num_1>> num_2>> num_3;
   n.push_back(num_1);
   n.push_back(num_2);
   n.push_back(num_3);
-  size_n = n.size();
-  for(int i = 0; i < size_n; i++) {
+  for(int i = 0; i < n.size(); i++) {
     if(n[i] > mayor)
       mayor = n[i];
   }
